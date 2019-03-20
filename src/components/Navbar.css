@@ -5,12 +5,9 @@
 
 #title {
     color: deeppink;
+    font-size: 2rem;
 }
 
 #greeting {
-    color: purple;
-}
-
-#score {
-    
+    color: palevioletred;
 }
