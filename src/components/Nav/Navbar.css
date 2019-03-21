@@ -1,5 +1,4 @@
 .navbar {
-    color: lightseagreen;
     font-family: 'Share Tech', sans-serif;
 }
 
@@ -10,4 +9,12 @@
 
 #greeting {
     color: palevioletred;
+}
+
+#score {
+    color: lightseagreen;
+}
+
+.navList {
+    list-style-type: none;
 }

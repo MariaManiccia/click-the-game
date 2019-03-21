@@ -7,11 +7,14 @@
 import React from 'react';
 import './Container.css';
 
-function Container() {
+function Container(props) {
   return (
     <div className="jumbotron jumbotron-fluid col-10" id="container">
       <div className="container">
         <p className="lead">Collect points by clicking a new photo. Be careful not to click the same one twice!</p>
+      </div>
+      <div>
+        {props.children}
       </div>
     </div>
   );

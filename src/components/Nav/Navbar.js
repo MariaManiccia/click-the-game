@@ -7,16 +7,18 @@
 import React from 'react';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="#" id="title">Click! the Game</a>
-      <p id="greeting">
+      <ul className="navList">
+        <a className="navbar-brand" href="#" id="title">Click! the Game</a>
+        <li id="greeting">
         Click on any picture to start
-      </p>
-      <p id="score">
-        Score: 0 | High Score: 0
-      </p>
+        </li>
+        <li id="score">
+        Score: {props.score} | High Score: {props.topScore}
+        </li>
+      </ul>
     </nav>
   );
 }
