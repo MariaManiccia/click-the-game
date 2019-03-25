@@ -20,13 +20,13 @@ class App extends Component {
       score: 0,
       maxScore: 12,
       topScore: 0,
-      message: "CLICK AN IMAGE TO BEGIN!"
+      message: "Click any image to being!"
     };
   }
 
   /* Functions for handling animation */
 
-  // REMOVES animation CSS class
+  // Removes animation CSS class
   removeAnimation = () => {
     // Grab the text at the top middle of the page
     let element = document.getElementById("animate-this");
@@ -75,8 +75,6 @@ class App extends Component {
       setTimeout(this.removeAnimation, 500);
     }
   };
-
-  
 
   /* game logic */
 

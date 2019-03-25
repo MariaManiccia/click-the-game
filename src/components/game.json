@@ -1,62 +1,62 @@
 [
   {
     "id": 1,
-    "image": "./images/one.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/one.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 2,
-    "image": "./images/two.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/two.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 3,
-    "image": "./images/three.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/three.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 4,
-    "image": "./images/four.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/four.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 5,
-    "image": "./images/five.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/five.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 6,
-    "image": "./images/six.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/six.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 7,
-    "image": "./images/seven.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/seven.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 8,
-    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/eight.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/eight.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 9,
-    "image": "./images/nine.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/nine.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 10,
-    "image": "./images/ten.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/ten.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 11,
-    "image": "./images/eleven.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/eleven.jpg?raw=true",
     "clicked": false
   },
   {
     "id": 12,
-    "image": "./images/twelve.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/twelve.jpg?raw=true",
     "clicked": false
   }
 ]
