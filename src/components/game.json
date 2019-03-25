@@ -36,7 +36,7 @@
   },
   {
     "id": 8,
-    "image": "./images/eight.jpg",
+    "image": "https://github.com/MariaManiccia/click-the-game/blob/master/src/images/eight.jpg",
     "clicked": false
   },
   {
