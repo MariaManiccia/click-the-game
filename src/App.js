@@ -32,7 +32,7 @@ class App extends Component {
   addAnimation = isCorrect => {
     let element = document.getElementById("card");
     // If incorrect
-    if (!isCorrect) {
+    if (!this.state.isGuessCorrect) {
       element.classList.add("w3-grayscale");
     }
   };
@@ -43,13 +43,13 @@ class App extends Component {
     if (isCorrect) {
       // Add animation
       this.addAnimation(true);
-      setTimeout(this.removeAnimation, 500);
+      setTimeout(this.removeAnimation, 300);
     }
     // If incorrect
     if (!isCorrect) {
       // Add animation
       this.addAnimation(false);
-      setTimeout(this.removeAnimation, 500);
+      setTimeout(this.removeAnimation, 300);
     }
   };
 
