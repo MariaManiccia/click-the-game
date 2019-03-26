@@ -9,4 +9,4 @@
 <li>Once the user's score is reset after an incorrect guess, the game should restart.</li>
 </ul>
 
-<h3>play here :: https://mariamaniccia.github.io/click-the-game/</h3>
+<h3>Play here :: https://mariamaniccia.github.io/click-the-game/</h3>
