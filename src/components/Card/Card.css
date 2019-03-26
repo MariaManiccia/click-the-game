@@ -1,0 +1,12 @@
+.card-holder img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .grow {
+    transition: all .1s ease-in-out;
+  }
+  
+  .grow:hover {
+    transform: scale(1.05);
+  }

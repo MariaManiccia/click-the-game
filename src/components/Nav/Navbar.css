@@ -1,20 +1,19 @@
-.navbar {
-    font-family: 'Share Tech', sans-serif;
-}
-
-#title {
-    color: deeppink;
-    font-size: 2rem;
-}
-
 #greeting {
     color: palevioletred;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 185%;
 }
 
 #score {
     color: lightseagreen;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 185%;
 }
 
-.navList {
-    list-style-type: none;
+/* I know I repeated this :/ */
+#title {
+    color: lightseagreen;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 200%;
 }
+

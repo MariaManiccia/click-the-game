@@ -2,10 +2,7 @@
 /* eslint-disable react/prefer-stateless-function */
 
 import "./App.css";
-
-// This actually imports the React node modules
 import React, { Component } from "react";
-
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Navbar from "./components/Nav/Navbar";
@@ -20,99 +17,77 @@ class App extends Component {
       score: 0,
       maxScore: 12,
       topScore: 0,
-      message: "Click any image to being!"
+      message: "Click any image to begin!"
     };
   }
 
-  /* Functions for handling animation */
-
-  // Removes animation CSS class
   removeAnimation = () => {
-    // Grab the text at the top middle of the page
-    let element = document.getElementById("animate-this");
-    // If the guess is correct...
-    if (this.state.isGuessCorrect) {
-      // ...remove the animation style of the correct guess
-      element.classList.remove("jello-vertical");
-    }
-    // If the guess is incorrect...
+    let element = document.getElementById("card");
+    // If incorrect
     if (!this.state.isGuessCorrect) {
-      // ...remove the animation style of the incorrect guess
-      element.classList.remove("shake-horizontal");
+      element.classList.remove("w3-grayscale");
     }
   };
 
-  // ADDS animation CSS class
   addAnimation = isCorrect => {
-    // Grab the text at the top middle of the page
-    let element = document.getElementById("animate-this");
-    // If the guess is correct...
-    if (isCorrect) {
-      // ...add the animation style of the correct guess
-      element.classList.add("jello-vertical");
-    }
-    // If the guess is incorrect...
+    let element = document.getElementById("card");
+    // If incorrect
     if (!isCorrect) {
-      // ...add the animation style of the incorrect guess
-      element.classList.add("shake-horizontal");
+      element.classList.add("w3-grayscale");
     }
   };
 
-  // TOGGLES the CSS class for animation
+  // Toggle
   toggleAnimation = isCorrect => {
-    // If the guess is correct...
+    // If correct
     if (isCorrect) {
       // Add animation
       this.addAnimation(true);
-      // Wait a split second and then remove it
       setTimeout(this.removeAnimation, 500);
     }
-    // If the guess is incorrect...
+    // If incorrect
     if (!isCorrect) {
       // Add animation
       this.addAnimation(false);
-      // Wait a split second and then remove it
       setTimeout(this.removeAnimation, 500);
     }
   };
 
-  /* game logic */
 
-  // Main click handler function
+  // Main click handler
   handleSaveClick = id => {
-    // Variable to hold the tiles state.
-    const tilez = this.state.tiles;
-    // Search through character tiles to find the one that matches the clicked id.
-    const tileClicked = tilez.filter(tile => tile.id === id);
+    const tiles = this.state.tiles;
+    // Match the one clicked
+    const tileClicked = tiles.filter(tile => tile.id === id);
 
     // If the tile isn't clicked...
     if (!tileClicked[0].clicked) {
-      // ...set it to now be clicked
       tileClicked[0].clicked = true;
-      // ...call this function to register the correct guess
+      // If correct
       this.handleCorrectClick();
-      // ...add the bouncy animation for correct guess
+      // Animation
       this.toggleAnimation(true);
 
-      // ... randomize character tiles
-      this.randomizeCharacters(tilez);
+      // Switch the order
+      this.randomizePhotos(tiles);
 
-      this.setState({ tilez });
+      this.setState({ tiles });
     } else {
       this.handleIncorrectClick();
       this.toggleAnimation(false);
     }
   };
 
-  // Function to randomize the characters
-  randomizeCharacters = characters => {
-    characters.sort((a, b) => {
+  // Function to switch up the pictures
+  randomizePhotos = photos => {
+    photos.sort((a, b) => {
       return 0.5 - Math.random();
     });
   };
 
   // Handler for correct guesses/clicks
   handleCorrectClick = () => {
+    // Check the state
     this.setState({ isGuessCorrect: true });
     if (this.state.score + 1 > this.state.topScore) {
       this.setState({ topScore: this.state.topScore + 1 });
@@ -138,22 +113,20 @@ class App extends Component {
       message: "Sorry! You lost. Want to play again?",
       isGuessCorrect: false
     });
-    // this.toggleIncorrectAnimation();
+    // Reset
     this.resetGame();
   };
 
-  // Resets the game
+  // Function to reset the game
   resetGame = id => {
-    const tilez = this.state.tiles;
-    for (let i = 0; i < tilez.length; i++) {
-      tilez[i].clicked = false;
+    const tiles = this.state.tiles;
+    for (let i = 0; i < tiles.length; i++) {
+      tiles[i].clicked = false;
     }
     this.setState({ score: 0 });
   };
 
-  /* Render and Return */
-
-  // Render the App component on the page
+  // Render the App 
   render() {
     const { message, score, tiles, topScore } = this.state;
     return (

@@ -1,15 +1,16 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/jsx-filename-extension */
-/* eslint-disable linebreak-style */
 import React from 'react';
+import './Header.css';
 
 function Header() {
   return (
-    <div className="align-items-center bg-header jumbotron header-hgt header-pad head-mar-top nav-shadow neon text-center yx-auto text-center">
-      <h1 className="flicker-1 header-font">
+    <div className="align-items-center bg-header jumbotron text-center">
+      <h1 className="header">
         Click on an image to earn points,
       </h1>
-      <h1 className="flicker-1 header-font">
+      <h1 className="header">
         But don't click on any more than once!
       </h1>
     </div>
